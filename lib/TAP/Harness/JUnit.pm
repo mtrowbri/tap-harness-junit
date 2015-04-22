@@ -239,6 +239,7 @@ sub parsetest {
 
 	my $tests_run = 0;
 	my $comment = ''; # Comment agreggator
+	my $prevTest = undef;
 	foreach my $result (@{$parser->{__results}}) {
 
 		my $time = $result->{__end_time} - $result->{__start_time};
@@ -266,6 +267,10 @@ sub parsetest {
 			# JUnit can't express these -- pretend they do not exist
 			$result->directive eq 'TODO' and next;
 			
+			# Under the assumption that merged STDERR always follows the 
+			# STDOUT on everyone's computer because it does on mine
+			$prevTest->{failure}[0]{content} = $comment if $prevTest->{failure};
+			
 			my $test = {
 				'time' => $time,
 				name => $self->uniquename($xml, $result->description),
@@ -290,6 +295,7 @@ sub parsetest {
 
 			push @{$xml->{testcase}}, $test;
 			$comment = '';
+			$prevTest = $test; 
 		}
 
 		# Log
