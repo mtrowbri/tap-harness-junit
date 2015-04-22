@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites>
+  <testsuite name="Mix of successful and failed checks" errors="0" failures="2" skipped="0" tests="6" time="0">
+    <system-out>not ok 1 - Every 3rd test should fail (test 0)
+#   Failed test 'Every 3rd test should fail (test 0)'
+#   at t/test.t line 10.
+#          got: '0'
+#     expected: anything else
+ok 2 - Every 3rd test should fail (test 1)
+ok 3 - Every 3rd test should fail (test 2)
+not ok 4 - Every 3rd test should fail (test 3)
+#   Failed test 'Every 3rd test should fail (test 3)'
+#   at t/test.t line 10.
+#          got: '0'
+#     expected: anything else
+ok 5 - Every 3rd test should fail (test 4)
+ok 6 - Every 3rd test should fail (test 5)
+1..6
+# Looks like you failed 2 tests of 6.
+</system-out>
+    <testcase name="Every 3rd test should fail (test 0)" classname="Mix of successful and failed checks" time="0">
+      <failure message="not ok 1 - Every 3rd test should fail (test 0)" type="TAP::Parser::Result::Test">  Failed test 'Every 3rd test should fail (test 0)'
+  at t/test.t line 10.
+         got: '0'
+    expected: anything else
+</failure>
+    </testcase>
+    <testcase name="Every 3rd test should fail (test 1)" classname="Mix of successful and failed checks" time="0" />
+    <testcase name="Every 3rd test should fail (test 2)" classname="Mix of successful and failed checks" time="0" />
+    <testcase name="Every 3rd test should fail (test 3)" classname="Mix of successful and failed checks" time="0">
+      <failure message="not ok 4 - Every 3rd test should fail (test 3)" type="TAP::Parser::Result::Test">  Failed test 'Every 3rd test should fail (test 3)'
+  at t/test.t line 10.
+         got: '0'
+    expected: anything else
+</failure>
+    </testcase>
+    <testcase name="Every 3rd test should fail (test 4)" classname="Mix of successful and failed checks" time="0" />
+    <testcase name="Every 3rd test should fail (test 5)" classname="Mix of successful and failed checks" time="0" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,16 @@
+not ok 1 - Every 3rd test should fail (test 0)
+#   Failed test 'Every 3rd test should fail (test 0)'
+#   at t/test.t line 10.
+#          got: '0'
+#     expected: anything else
+ok 2 - Every 3rd test should fail (test 1)
+ok 3 - Every 3rd test should fail (test 2)
+not ok 4 - Every 3rd test should fail (test 3)
+#   Failed test 'Every 3rd test should fail (test 3)'
+#   at t/test.t line 10.
+#          got: '0'
+#     expected: anything else
+ok 5 - Every 3rd test should fail (test 4)
+ok 6 - Every 3rd test should fail (test 5)
+1..6
+# Looks like you failed 2 tests of 6.
